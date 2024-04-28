@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江山城市内容系统</title>
+<link rel="stylesheet" href="../css/style.css"/>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #FFC0CB; /* 粉色背景 */
+    }
+    .nav a {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: navColorChange 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    .title {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: titleColorChange 2s infinite, scaleEffect 1s infinite alternate;
+        text-align: center;
+    }
+    th:nth-child(1) {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: thColorChange1 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    th:nth-child(2) {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: thColorChange2 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    th:nth-child(3) {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: thColorChange3 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    th:nth-child(4) {
+    color: #000;
+    padding: 6px 12px;
+    background: transparent;
+    text-decoration: none;
+    animation: thColorChange4 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    th:nth-child(5) {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: thColorChange5 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    th:nth-child(6) {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: thColorChange6 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    th:nth-child(7) {
+        color: #000;
+        padding: 6px 12px;
+        background: transparent;
+        text-decoration: none;
+        animation: thColorChange7 2s infinite, scaleEffect 1s infinite alternate;
+    }
+    /* ...为其他的th元素添加相应的样式... */
+
+    @keyframes navColorChange {
+        0% { color: #ff0000; }
+        14% { color: #ff7f00; }
+        28% { color: #ffff00; }
+        42% { color: #00ff00; }
+        57% { color: #0000ff; }
+        71% { color: #4b0082; }
+        85% { color: #8b00ff; }
+        100% { color: #ff0000; }
+    }
+
+    @keyframes titleColorChange {
+        0% { color: #8b00ff; }
+        14% { color: #ff0000; }
+        28% { color: #ff7f00; }
+        42% { color: #ffff00; }
+        57% { color: #00ff00; }
+        71% { color: #0000ff; }
+        85% { color: #4b0082; }
+        100% { color: #8b00ff; }
+    }
+
+    @keyframes thColorChange1 {
+        0% { color: #4b0082; }
+        14% { color: #8b00ff; }
+        28% { color: #ff0000; }
+        42% { color: #ff7f00; }
+        57% { color: #ffff00; }
+        71% { color: #00ff00; }
+        85% { color: #0000ff; }
+        100% { color: #4b0082; }
+    }
+
+    @keyframes thColorChange2 {
+        0% { color: #8b00ff; }
+        14% { color: #4b0082; }
+        28% { color: #0000ff; }
+        42% { color: #00ff00; }
+        57% { color: #ffff00; }
+        71% { color: #ff7f00; }
+        85% { color: #ff0000; }
+        100% { color: #8b00ff; }
+    }
+
+    @keyframes thColorChange3 {
+        0% { color: #ff0000; }
+        14% { color: #8b00ff; }
+        28% { color: #4b0082; }
+        42% { color: #0000ff; }
+        57% { color: #00ff00; }
+        71% { color: #ffff00; }
+        85% { color: #ff7f00; }
+        100% { color: #ff0000; }
+    }
+    @keyframes thColorChange4 {
+        0% { color: #0000ff; }
+        14% { color: #4b0082; }
+        28% { color: #8b00ff; }
+        42% { color: #ff0000; }
+        57% { color: #ff7f00; }
+        71% { color: #ffff00; }
+        85% { color: #00ff00; }
+        100% { color: #0000ff; }
+    }
+    @keyframes thColorChange5 {
+        0% { color: #00ff00; }
+        14% { color: #0000ff; }
+        28% { color: #4b0082; }
+        42% { color: #8b00ff; }
+        57% { color: #ff0000; }
+        71% { color: #ff7f00; }
+        85% { color: #ffff00; }
+        100% { color: #00ff00; }
+    }
+    @keyframes thColorChange6 {
+        0% { color: #ffff00; }
+        14% { color: #00ff00; }
+        28% { color: #0000ff; }
+        42% { color: #4b0082; }
+        57% { color: #8b00ff; }
+        71% { color: #ff0000; }
+        85% { color: #ff7f00; }
+        100% { color: #ffff00; }
+    }
+    @keyframes thColorChange7 {
+        0% { color: #ff7f00; }
+        14% { color: #ffff00; }
+        28% { color: #00ff00; }
+        42% { color: #0000ff; }
+        57% { color: #4b0082; }
+        85% { color: #8b00ff; }
+        100% { color: #ff0000; }
+    }
+    /* ...为其他的th元素添加相应的动画... */
+
+    @keyframes scaleEffect {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.2); }
+    }
+
+    table.lib-list {
+        animation: bgColorChange 5s infinite;
+    }
+
+    @keyframes bgColorChange {
+        0% { background-color: #FFB6C1; }  /* 浅粉红 */
+        20% { background-color: #FFDAB9; } /* 浅桃色 */
+        40% { background-color: #FFFACD; } /* 柠檬绸 */
+        60% { background-color: #E0FFFF; } /* 浅青色 */
+        80% { background-color: #F0FFF0; } /* 蜜露 */
+        100% { background-color: #FFB6C1; } /* 浅粉红 */
+    }
+</style>
+
+
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="title">江山城市内容系统</div>
+        <div class="nav">
+            <a href="../add.php">添加内容</a>
+            <a href="../logout.php">退出登录</a>
+            <!-- 搜索表单 -->
+            <form action="search.php" method="get" style="display: inline;">
+                <input type="text" name="search" placeholder="搜索省份...">
+                <input type="submit" value="搜索">
+            </form>
+        </div>
+    </div>
+    <div class="main">
+        <table class="lib-list">
+            <tr>
+                <th width="200">内容标题</th>
+                <th width="200">发布者</th>
+                <th width="200">地区</th>
+                <th width="250">发布时间</th>
+                <th width="250">修改时间</th>
+                <th width="400">内容摘要</th>
+                <th width="100">操作</th>
+            </tr>
+            <?php
+                function getRandomColor() {
+                    $letters = '0123456789ABCDEF';
+                    $color = '#';
+                    for($i = 0; $i < 6; $i++) {
+                        $index = rand(0,15);
+                        $color .= $letters[$index];
+                    }
+                    return $color;
+                }
+            ?>
+            <?php foreach($data as $v): ?>
+                <tr>
+                    <td class="lib-title">
+                        <a href="../show.php?id=<?php echo $v['id'];?>"><?php echo $v['title'];?></a>
+                    </td>
+                    <td><?php echo $v['author'];?></td>
+                    <td><?php echo $v['province_name'];?></td>
+                    <td><?php echo $v['created_at'];?></td>
+                    <td><?php echo $v['updated_at'];?></td>
+                    <td><?php echo $v['content'];?></td>
+                    <td>
+                        <a href="../edit.php?id=<?php echo $v['id'];?>">编辑</a> 
+                        <a href="../del.php?id=<?php echo $v['id'];?>" onclick="return confirm('确定删除？');" >删除</a> 
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</div>
+</body>
+</html>

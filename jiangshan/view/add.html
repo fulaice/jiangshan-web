@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江山城市内容发布系统</title>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="title">江山城市内容发布系统</div>
+        <div class="nav">
+            <a href="index.php">返回</a>
+        </div>
+    </div>
+    <div class="main">
+        <form action="../add.php" method="post">
+            <table class="lib-edit">
+                <tr>
+                    <th>内容标题：</th>
+                    <td><input type="text" name="title" placeholder="填写内容标题..." value="<?php echo isset($_SESSION['form_data']['title']) ? $_SESSION['form_data']['title'] : ''; ?>" /></td>
+                </tr>
+                <tr>
+                    <th>作者：</th>
+                    <td>
+                        <input type="text" name="author" value="<?php echo $_SESSION['username']; ?>" disabled />
+                        <input type="hidden" name="author" value="<?php echo $_SESSION['username']; ?>" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>正文：</th>
+                    <td><textarea name="body" placeholder="填写内容正文..."><?php echo isset($_SESSION['form_data']['body']) ? $_SESSION['form_data']['body'] : ''; ?></textarea></td>
+                </tr>
+                <tr>
+                    <th>省份：</th>
+                    <td>
+                        <select name="province">
+                            <option value="">请选择省份</option>
+                            <?php
+                            require 'info_db_connect.php'; // 连接数据库
+                            $sql = "SELECT id, province FROM provinces"; // 查询省份数据
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute();
+                            $provinces = $stmt->fetchAll(PDO::FETCH_ASSOC); // 获取查询结果
+                            foreach ($provinces as $province) {
+                                $selected = isset($_SESSION['form_data']['province']) && $_SESSION['form_data']['province'] == $province["id"] ? 'selected' : '';
+                                echo "<option value=\"" . $province["id"] . "\" $selected>" . $province["province"] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>城市：</th>
+                    <td><input type="text" name="city" value="<?php echo isset($_SESSION['form_data']['city']) ? $_SESSION['form_data']['city'] : '无'; ?>" placeholder="填写城市（可选）" /></td>
+                </tr>
+                <tr>
+                    <th>县区：</th>
+                    <td><input type="text" name="country" value="<?php echo isset($_SESSION['form_data']['country']) ? $_SESSION['form_data']['country'] : '无'; ?>" placeholder="填写县区（可选）" /></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="发布内容" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

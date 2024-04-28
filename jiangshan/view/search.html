@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>江山城市内容系统</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="title">江山城市内容系统</div>
+        <div class="nav">
+            <a href="../index.php">首页</a>
+            <a href="../add.php">添加内容</a>
+            <a href="../logout.php">退出登录</a>
+            <!-- 搜索表单 -->
+            <form action="search.php" method="get" style="display: inline;">
+                <input type="text" name="search" placeholder="搜索省份...">
+                <input type="submit" value="搜索">
+            </form>
+        </div>
+    </div>
+    <div class="main">
+        <table class="lib-list">
+            <tr>
+                <th width="200">内容标题</th>
+                <th width="200">发布者</th>
+                <th width="200">地区</th>
+                <th width="250">发布时间</th>
+                <th width="250">修改时间</th>
+                <th width="400">内容摘要</th>
+                <th width="100">操作</th>
+            </tr>	
+            <?php foreach($results as $v): ?>
+                <tr>
+                    <td class="lib-title">
+                        <a href="../show.php?id=<?php echo $v['id'];?>"><?php echo $v['title'];?></a>
+                    </td>
+                    <td><?php echo $v['author'];?></td>
+                    <td><?php echo $v['province'];?></td>
+                    <td><?php echo $v['created_at'];?></td>
+                    <td><?php echo $v['updated_at'];?></td>
+                    <td><?php echo $v['content'];?></td>
+                    <td>
+                        <a href="../edit.php?id=<?php echo $v['id'];?>">编辑</a> 
+                        <a href="../del.php?id=<?php echo $v['id'];?>" onclick="return confirm('确定删除？');" >删除</a> 
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</div>
+</body>
+</html>

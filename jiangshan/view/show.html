@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江山城市内容管理系统</title>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="title">江山城市内容管理系统</div>
+        <div class="nav">
+            <a href="index.php">返回</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="lib-title"><?php echo $data['title'];?></div>
+        <div class="lib-author">作者：<?php echo $data['author'];?></div>
+        <div class="lib-location">位置：<?php echo $data['province_name'];?></div>
+        <div class="lib-time">创建时间：<?php echo $data['created_at'];?> 更新时间：<?php echo $data['updated_at'];?></div>
+        <div class="lib-content"><?php echo $data['body'];?></div>
+    </div>
+</div>
+</body>
+</html>

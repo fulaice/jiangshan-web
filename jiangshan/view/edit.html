@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江山城市内容管理系统</title>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="title">江山城市内容管理系统</div>
+        <div class="nav">
+            <a href='index.php'>返回</a>
+        </div>
+    </div>
+    <div class="main">
+        <form method="post">
+            <table class="lib-edit">
+                <tr>
+                    <th>标题：</th>
+                    <td><input type="text" name="title" value="<?php echo $data['title'];?>"/></td>
+                </tr>
+                <tr>
+                    <th>作者：</th>
+                    <td><input type="text" name="author" value="<?php echo $data['author'];?>"/></td>
+                </tr>
+                <tr>
+                    <th>省份：</th>
+                    <td><input type="text" name="province" value="<?php echo $data['province'];?>"/></td>
+                </tr>
+                <tr>
+                    <th>城市：</th>
+                    <td><input type="text" name="city" value="<?php echo $data['city'];?>"/></td>
+                </tr>
+                <tr>
+                    <th>县区：</th>
+                    <td><input type="text" name="country" value="<?php echo $data['country'];?>"/></td>
+                </tr>
+                <tr>
+                    <th>正文：</th>
+                    <td><textarea name="body"><?php echo $data['body'];?></textarea></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="提交修改" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

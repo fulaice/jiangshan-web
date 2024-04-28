@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Log In &amp; Sign Up Form - Responsive</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="html.design">
+<!-- description -->
+<meta name="description" content="Log In &amp; Sign Up Form - Responsive Template">
+<!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<!-- Fontawesome CSS -->
+<link rel="stylesheet" href="/css/fontawesome.css">
+<!-- Reset CSS -->
+<link rel="stylesheet" href="/css/reset.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="/css/style-ch.css">
+<!-- Responsive  CSS -->
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+<div class="popup-bg"></div>
+
+<div class="header-title">
+	<div class="container">
+		<h1 class="text-white">江山城市内容后台管理系统</h1>
+	</div>
+</div>
+
+<div class="popup-login-signup">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<button type="button" class="btn-tip" data-toggle="modal" data-target="#exampleModalCenter">
+					登录/注册
+				</button>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<nav class="tab-bar-top">
+							<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+								<a class="nav-item nav-link active" id="nav-login-tab" data-toggle="tab" href="#nav-login" role="tab" aria-controls="nav-login" aria-selected="true">登录</a>
+								<a class="nav-item nav-link" id="nav-signup-tab" data-toggle="tab" href="#nav-signup" role="tab" aria-controls="nav-signup" aria-selected="false">注册</a>
+							</div>
+						</nav>
+						<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+								<form class="form-login-signup" action="../login.php" method="post">
+									<div class="form-label-group">
+										<input type="text" name ="username" id="inputtext" class="form-control" placeholder="text address" required autofocus>
+										<label for="inputtext">用户名</label>
+									</div>
+
+									<div class="form-label-group">
+										<input type="password" name ="password"id="inputPassword" class="form-control" placeholder="Password" required>
+										<label for="inputPassword">密码</label>
+									</div>
+									<!-- <div class="custom-control custom-checkbox mb-3">
+										<input type="checkbox" class="custom-control-input" id="customCheck1">
+										<label class="custom-control-label" for="customCheck1">记住密码</label>
+									</div> -->
+									<button class="btn btn-lg btn-primary btn-color-hover btn-block text-uppercase" type="submit"value="登录">登录</button>
+									<hr class="my-4">
+									<!-- <button class="btn btn-lg btn-google btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+									<button class="btn btn-lg btn-facebook btn-block soi-hv  text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button> -->
+								</form>
+							</div>
+							<div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signup-tab">
+								<form class="form-login-signup"action="../register.php" method="post">
+									<div class="form-label-group">
+										<input type="text" id="inputUserame" name="username" class="form-control" placeholder="Username" required autofocus>
+										<label for="inputUserame">用户名</label>
+									</div>
+
+									<!-- <div class="form-label-group">
+										<input type="email" id="inputEmail-1" class="form-control" placeholder="Email address" required>
+										<label for="inputEmail-1">Email address</label>
+									</div> -->
+								  
+									<hr>
+
+									<div class="form-label-group">
+										<input type="password" name ="password"id="inputPassword-1" class="form-control" placeholder="Password" required>
+										<label for="inputPassword-1">密码</label>
+									</div>
+								  
+									<!-- <div class="form-label-group">
+										<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+										<label for="inputConfirmPassword">确认密码</label>
+									</div> -->
+<!-- 									
+									<div class="custom-control custom-checkbox mb-3">
+										<input type="checkbox" class="custom-control-input" id="customCheck2">
+										<label class="custom-control-label" for="customCheck2">I Agree To The Terms & Conditions</label>
+									</div> -->
+
+									<button class="btn btn-lg btn-primary btn-block btn-color-hover text-uppercase" type="submit">注册</button>									
+									<hr class="my-4">
+									<!-- <button class="btn btn-lg btn-google btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+									<button class="btn btn-lg btn-facebook btn-block soi-hv text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> -->
+								</form> 
+							<!-- </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- jquery latest version -->
+<script src="js/jquery.min.js"></script>
+<!-- popper.min.js -->
+<script src="js/popper.min.js"></script>    
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
